@@ -1,8 +1,7 @@
 # otus-clickhouse-AML-project
 
-# Demo for ClickHouse External Table
 
-## Start the example
+## 
 
 Просто выполните команду docker compose up в этой папке. В стеке используются следующие Docker-контейнеры:
 
@@ -13,7 +12,7 @@ docker.redpanda.com/redpandadata/redpanda — совместимая с Kafka ш
 docker.redpanda.com/redpandadata/console — веб-интерфейс для исследования данных в Kafka/Redpanda.
 Когда все контейнеры будут запущены, в Redpanda автоматически создадутся несколько топиков с данными в реальном времени.
 
-## Read data from Redpanda, apply ETL and write to ClickHouse
+## Чтение данных из Redpanda, применение ETL и запись в ClickHouse
 Откройте `proton client` в контейнере proton. Выполните следующий SQL-запрос для создания внешнего потока, который будет читать данные в реальном времени из Redpanda.
 
 ```sql
@@ -56,7 +55,7 @@ CREATE MATERIALIZED VIEW mv INTO ch_local AS
     FROM frontend_events;
 ```
 
-## Read data from ClickHouse
+## Чтение данных из clickhouse
 
 Вы можете выполнить следующий SQL-запрос для выборки данных из ClickHouse:
 
