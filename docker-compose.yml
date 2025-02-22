@@ -8,9 +8,14 @@ services:
 
   clickhouse:
     image: clickhouse/clickhouse-server:latest
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=default
     ports:
       - 9000:9000
       - 8123:8123
+    volumes:
+      - ./clickhouse/custom_users.xml:/etc/clickhouse-server/users.d/custom_users.xml:ro
     ulimits:
       nofile:
         soft: 262144

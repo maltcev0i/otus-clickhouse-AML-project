@@ -1,0 +1,23 @@
+<clickhouse>
+    <users>
+        <proton>
+            <password>123456</password>
+            <!-- Разрешаем доступ с любых IP -->
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <profile>default</profile>
+            <quota>default</quota>
+            <!-- Назначаем роль, которая даёт все права -->
+            <default_roles>
+                <role>all</role>
+            </default_roles>
+        </proton>
+    </users>
+    <roles>s
+        <all>
+            <!-- Выдаём все права -->
+            <grant>ALL</grant>
+        </all>
+    </roles>
+</clickhouse>
